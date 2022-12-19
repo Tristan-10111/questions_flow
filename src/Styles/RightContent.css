@@ -1,9 +1,53 @@
-.rightContent {
+/* .rightContent {
     height: 100vh !important;
     overflow-y: hidden;
   }
   
   .rightContent::-webkit-scrollbar {
     display: none;
-  }
+  } */
   
+  /* .container-fluid{
+    height: 100vh !important;
+    overflow-y: scroll !important;
+  }
+
+  .container-fluid::-webkit-scrollbar {
+    display: none !important;
+  } */
+
+
+ 
+
+  .dropDown{
+    background-color: transparent !important;
+    color: #fff!important;
+    border: 1px solid ;
+    border-radius: 50px !important;
+  }
+
+  .dropDown option{
+    background-color: lightblue!important;
+    color: black;
+    border: 10px solid gold !important;
+    border-radius: 20px !important;
+    margin: 1rem !important;
+  }
+
+  /* .dropDowns{
+    font-size: 1.1rem !important;
+    border-radius: 10px !important;
+    background-color: transparent !important;
+  } */
+  .dropDowns:hover{
+   background-color: black !important;
+  }
+
+  .dropDown .option
+  {
+    background-color: aqua !important ;
+  }
+
+  .divider{
+    background-color: black !important;
+  }

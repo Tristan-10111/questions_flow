@@ -1,0 +1,8 @@
+.container-fluid{
+    height: 100vh !important;
+    overflow-y: scroll !important;
+  }
+
+  .container-fluid::-webkit-scrollbar {
+    display: none !important;
+  }

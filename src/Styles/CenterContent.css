@@ -1,6 +1,7 @@
 .centerContent {
     height: 100vh !important;
     overflow-y: hidden;
+    background-color: gray !important;
   }
   
   .centerContent::-webkit-scrollbar {

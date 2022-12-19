@@ -18,10 +18,10 @@ const WellnessForm = () => {
 				<div className='col-3 bg-secondary'>
 					<LeftContent />
 				</div>
-				<div className='col-6 bg-danger'>
+				<div className='col-6 bg-light'>
 					<CenterContent />
 				</div>
-				<div className='col-3 bg-warning'>
+				<div className='col-3 bg-secondary'>
 					<RightContent
 						openingQuestion={openingQuestion}
 						redOpeningQuestion1={redOpeningQuestion1}
