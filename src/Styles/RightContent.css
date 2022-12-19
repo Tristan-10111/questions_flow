@@ -1,0 +1,9 @@
+.rightContent {
+    height: 100vh !important;
+    overflow-y: hidden;
+  }
+  
+  .rightContent::-webkit-scrollbar {
+    display: none;
+  }
+  

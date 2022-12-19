@@ -1,0 +1,8 @@
+.centerContent {
+    height: 100vh !important;
+    overflow-y: hidden;
+  }
+  
+  .centerContent::-webkit-scrollbar {
+    display: none;
+  }
