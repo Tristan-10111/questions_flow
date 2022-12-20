@@ -16,10 +16,26 @@ const WellnessForm = () => {
 		<div className='container-fluid'>
 			<div className='row'>
 				<div className='col-3 bg-secondary'>
-					<LeftContent />
+					<LeftContent
+						openingQuestion={openingQuestion}
+						redOpeningQuestion1={redOpeningQuestion1}
+						redOpeningQuestion2={redOpeningQuestion2}
+						blueOpeningQuestion1={blueOpeningQuestion1}
+						blueOpeningQuestion2={blueOpeningQuestion2}
+						youthQuestion1={youthQuestion1}
+						youthQuestion2={youthQuestion2}
+					/>
 				</div>
 				<div className='col-6 bg-light'>
-					<CenterContent />
+					<CenterContent
+						openingQuestion={openingQuestion}
+						redOpeningQuestion1={redOpeningQuestion1}
+						redOpeningQuestion2={redOpeningQuestion2}
+						blueOpeningQuestion1={blueOpeningQuestion1}
+						blueOpeningQuestion2={blueOpeningQuestion2}
+						youthQuestion1={youthQuestion1}
+						youthQuestion2={youthQuestion2}
+					/>
 				</div>
 				<div className='col-3 bg-secondary'>
 					<RightContent

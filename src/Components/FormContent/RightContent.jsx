@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import RedOpeningQuestions from "../../Data/RedQuestions.json";
 import BlueOpeningQuestions from "../../Data/BlueQuestions.json";
 import YouthQuestions from "../../Data/YouthQuestions.json";
+import TheRedOpeningQuestions from "../../Data/RedOpeningQuestions.json";
+import TheBlueOpeningQuestions from "../../Data/BlueOpeningQuestions.json";
+import TheYouthOpeningQuestions from "../../Data/YouthOpeningQuestions.json";
 import "../../Styles/RightContent.css";
 
 const RightContent = (props) => {
@@ -26,8 +29,22 @@ const RightContent = (props) => {
 			: props.setYouthQuestion2(false);
 	}, [props.openingQuestion, props]);
 
-	const handleOnChange = (e) => {
+	const handleOnChange1 = (e) => {
 		props.setOpeningQuestion(e.target.value);
+		props.setRedOpeningQuestion1(
+			<div>
+				{TheRedOpeningQuestions.map((roq) => {
+					return <p>{roq.redOpeningQuestion1}</p>;
+				})}
+			</div>,
+		);
+		// props.setRedOpeningQuestion1(
+		// 	<div>
+		// 		{TheRedOpeningQuestions.map((roq) => {
+		// 			return <p>{roq.redOpeningQuestion1}</p>;
+		// 		})}
+		// 	</div>,
+		// );
 	};
 
 	const renderResult = () => {
@@ -396,22 +413,39 @@ const RightContent = (props) => {
 	return (
 		<div className='container-fluid rightContent'>
 			<div className='mt-4 d-flex flex-column'>
-				<select
-					className='form-select dropDown'
-					value={props.openingQuestion}
-					onChange={handleOnChange}>
-					<option value=''>Select Opening Question</option>
-					<option value='redOpeningQuestion1'>How are you doing today ?</option>
-					<option value='redOpeningQuestion2'>How are you feeling Today</option>
-					<option value='blueOpeningQuestion1'>
-						How are things going at work/home
-					</option>
-					<option value='blueOpeningQuestion2'>
-						How is your relation ship with your family
-					</option>
-					<option value='youthQuestion1'>Earlier you said you...?</option>
-					<option value='youthQuestion2'>What im hearing is...?</option>
-				</select>
+				<div className='form-select dropDown' value={props.openingQuestion}>
+					<button value=''>Select Opening Question</button>
+					<button value='redOpeningQuestion1' onClick={handleOnChange1}>
+						{TheRedOpeningQuestions.map((roq) => {
+							return <p>{roq.redOpeningQuestion1}</p>;
+						})}
+					</button>
+					<button value='redOpeningQuestion2'>
+						{TheRedOpeningQuestions.map((roq) => {
+							return <p>{roq.redOpeningQuestion2}</p>;
+						})}
+					</button>
+					<button value='blueOpeningQuestion1'>
+						{TheBlueOpeningQuestions.map((boq) => {
+							return <p>{boq.blueOpeningQuestion1}</p>;
+						})}
+					</button>
+					<button value='blueOpeningQuestion2'>
+						{TheBlueOpeningQuestions.map((boq) => {
+							return <p>{boq.blueOpeningQuestion2}</p>;
+						})}
+					</button>
+					<button value='youthQuestion1'>
+						{TheYouthOpeningQuestions.map((yoq) => {
+							return <p>{yoq.youthOpeningQuestion1}</p>;
+						})}
+					</button>
+					<button value='youthQuestion2'>
+						{TheYouthOpeningQuestions.map((yoq) => {
+							return <p>{yoq.redOpeningQuestion2}</p>;
+						})}
+					</button>
+				</div>
 			</div>
 			<div>{renderResult()}</div>
 		</div>
